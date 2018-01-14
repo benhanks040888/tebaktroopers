@@ -1,6 +1,7 @@
 <template>
   <div class="game">
-    <h1>{{ user }}, do you know this trooper's name?</h1>
+    <p><strong>{{ user }}</strong></p>
+    <p>Score: <strong><span class="highlight">0</span>/130</strong></p>
     
     <transition appear name="fade">
       <img :src="logoUrl">
@@ -57,7 +58,7 @@ export default {
       return '../static/assets/images/' + this.currentQuestion.image
     }
   },
-  mounted () {
+  created () {
     this.currentQuestion.image = 'logo.png'
     this.currentQuestion.id = '1'
     this.currentQuestion.options = [
@@ -83,6 +84,10 @@ export default {
 </script>
 
 <style>
+.highlight {
+  color: #41B883;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.25s
 }
