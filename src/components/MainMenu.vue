@@ -2,19 +2,43 @@
   <div class="main-menu">
     <h1>TebakTroopers</h1>
 
-    <router-link to="game" class="btn btn-primary btn-block">Start</router-link>
+    <div class="form-group">
+      <input type="text" v-model="name" class="form-control" placeholder="Input your name" @change="setUser(name)">
+    </div>
+
+    <router-link to="game" class="btn btn-primary btn-block" :class="{ disabled: !user }">Start</router-link>
     <router-link to="highscore" class="btn btn-primary btn-block">High Scores</router-link>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   name: 'MainMenu',
   data () {
     return {
     }
   },
+  created () {
+  },
+  computed: {
+    ...mapGetters([
+      'user'
+    ]),
+    name: {
+      get () {
+        return this.user
+      },
+      set (newName) {
+        this.setUser(newName)
+      }
+    }
+  },
   methods: {
+    ...mapActions([
+      'setUser'
+    ])
   }
 }
 </script>

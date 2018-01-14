@@ -1,27 +1,83 @@
 <template>
   <div class="game">
-    <h1>Game Screen</h1>
+    <h1>{{ user }}, do you know this trooper's name?</h1>
     
     <transition appear name="fade">
-      <img src="../assets/logo.png">
+      <img :src="logoUrl">
     </transition>
-
-    <button type="button" class="btn btn-outline-primary btn-block">Option 1</button>
-    <button type="button" class="btn btn-outline-primary btn-block">Option 2</button>
-    <button type="button" class="btn btn-outline-primary btn-block">Option 3</button>
-    <button type="button" class="btn btn-outline-primary btn-block">Option 4</button>
+    
+    <transition-group name="fade" tag="div" class="options">
+      <button type="button" class="btn btn-outline-primary" @click="onOptionClicked(option.id)" v-for="option in currentQuestion.options" :key="option.id">{{option.name}}</button>
+    </transition-group>
 
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Game',
   data () {
     return {
+      currentQuestion: {
+        image: '',
+        id: '',
+        options: []
+      }
     }
   },
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
+      if (!vm.user) {
+        next('/')
+      }
+
+      next()
+    })
+  },
   methods: {
+    onOptionClicked (id) {
+      if (id === this.currentQuestion.id) {
+        console.log('You are correct!')
+      } else {
+        console.log('Bzzt! You are wrong!')
+      }
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'user'
+    ]),
+    logoUrl () {
+      if (!this.currentQuestion.image) {
+        return undefined
+      }
+
+      return '../static/assets/images/' + this.currentQuestion.image
+    }
+  },
+  mounted () {
+    this.currentQuestion.image = 'logo.png'
+    this.currentQuestion.id = '1'
+    this.currentQuestion.options = [
+      {
+        'id': '1',
+        'name': 'A'
+      },
+      {
+        'id': '2',
+        'name': 'B'
+      },
+      {
+        'id': '3',
+        'name': 'C'
+      },
+      {
+        'id': '4',
+        'name': 'D'
+      }
+    ]
   }
 }
 </script>
@@ -32,5 +88,11 @@ export default {
 }
 .fade-enter, .fade-leave-active {
   opacity: 0
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5em;
 }
 </style>
