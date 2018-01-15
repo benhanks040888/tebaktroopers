@@ -2,11 +2,11 @@
   <div class="game">
     <p><strong>{{ user }}</strong></p>
     <p>Score: <strong><span class="highlight">0</span>/130</strong></p>
-    
+
     <transition appear name="fade">
       <img :src="logoUrl">
     </transition>
-    
+
     <transition-group name="fade" tag="div" class="options">
       <button type="button" class="btn btn-outline-primary" @click="onOptionClicked(option.id)" v-for="option in currentQuestion.options" :key="option.id">{{option.name}}</button>
     </transition-group>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Game',
@@ -38,6 +38,9 @@ export default {
     })
   },
   methods: {
+    ...mapActions([
+      'initializeQuestions'
+    ]),
     onOptionClicked (id) {
       if (id === this.currentQuestion.id) {
         console.log('You are correct!')
@@ -59,6 +62,9 @@ export default {
     }
   },
   created () {
+    this.initializeQuestions(() => {
+      console.log('callback dari initializeQuestions')
+    })
     this.currentQuestion.image = 'logo.png'
     this.currentQuestion.id = '1'
     this.currentQuestion.options = [
