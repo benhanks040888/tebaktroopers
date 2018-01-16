@@ -1,6 +1,7 @@
 <template>
   <div class="main-menu">
     <h1>TebakTroopers</h1>
+    <p>Gotta tebak 'em all!</p>
 
     <div class="form-group">
       <input type="text" v-model="name" class="form-control" placeholder="Input your name" @change="setUser(name)">

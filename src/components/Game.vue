@@ -1,16 +1,27 @@
 <template>
   <div class="game">
-    <p><strong>{{ user }}</strong></p>
-    <p>Score: <strong><span class="highlight">0</span>/130</strong></p>
+    <div v-if="!gameFinished">
+      <p><strong>{{ user }}</strong></p>
+      <p>Score: <strong><span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
 
-    <transition appear name="fade">
-      <img :src="logoUrl">
-    </transition>
+      <transition appear name="fade">
+        <img :src="logoUrl" class="photo mb-2">
+      </transition>
 
-    <transition-group name="fade" tag="div" class="options">
-      <button type="button" class="btn btn-outline-primary" @click="onOptionClicked(option.id)" v-for="option in currentQuestion.options" :key="option.id">{{option.name}}</button>
-    </transition-group>
+      <transition-group name="fade" tag="div" class="options">
+        <button type="button" class="btn btn-outline-primary" @click="onAnswer(option.id)" v-for="option in options" :key="option.id">{{option.name}}</button>
+      </transition-group>
+    </div>
 
+    <div v-if="gameFinished">
+      <h1>Game ends!</h1>
+      <p><strong>{{ user }}</strong>, you get <span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
+
+      <button type="button" class="btn btn-outline-primary" @click="initializeGame" >Restart Game</button>
+
+      <router-link to="highscore" class="btn btn-primary">See High Scores</router-link>
+
+    </div>
   </div>
 </template>
 
@@ -18,16 +29,7 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  name: 'Game',
-  data () {
-    return {
-      currentQuestion: {
-        image: '',
-        id: '',
-        options: []
-      }
-    }
-  },
+  name: 'game',
   beforeRouteEnter (to, from, next) {
     next(vm => {
       if (!vm.user) {
@@ -37,54 +39,55 @@ export default {
       next()
     })
   },
-  methods: {
-    ...mapActions([
-      'initializeQuestions'
-    ]),
-    onOptionClicked (id) {
-      if (id === this.currentQuestion.id) {
-        console.log('You are correct!')
-      } else {
-        console.log('Bzzt! You are wrong!')
-      }
-    }
-  },
   computed: {
     ...mapGetters([
-      'user'
+      'user',
+      'questions',
+      'answerCount',
+      'totalQuestions',
+      'currentQuestion',
+      'options',
+      'gameFinished'
     ]),
     logoUrl () {
       if (!this.currentQuestion.image) {
         return undefined
       }
 
-      return '../static/assets/images/' + this.currentQuestion.image
+      return '../static/people/' + this.currentQuestion.image
     }
   },
   created () {
     this.initializeQuestions(() => {
-      console.log('callback dari initializeQuestions')
+      this.initializeGame()
     })
-    this.currentQuestion.image = 'logo.png'
-    this.currentQuestion.id = '1'
-    this.currentQuestion.options = [
-      {
-        'id': '1',
-        'name': 'A'
-      },
-      {
-        'id': '2',
-        'name': 'B'
-      },
-      {
-        'id': '3',
-        'name': 'C'
-      },
-      {
-        'id': '4',
-        'name': 'D'
+  },
+  methods: {
+    ...mapActions([
+      'initializeQuestions',
+      'initializeGame',
+      'setCurrentQuestion',
+      'increaseAnswerCount',
+      'setOptions',
+      'finishGame'
+    ]),
+    onAnswer (id) {
+      if (id === this.currentQuestion.id) {
+        console.log('You are correct!')
+        this.increaseAnswerCount()
+        if (this.answerCount === this.totalQuestions) {
+          this.finishGame()
+          // save score
+        } else {
+          this.setCurrentQuestion(this.questions[this.answerCount])
+          this.setOptions()
+        }
+      } else {
+        console.log('Bzzt! You are wrong!')
+        this.finishGame()
+        // save score
       }
-    ]
+    }
   }
 }
 </script>
@@ -92,6 +95,10 @@ export default {
 <style>
 .highlight {
   color: #41B883;
+}
+
+.photo {
+  max-width: 300px;
 }
 
 .fade-enter-active, .fade-leave-active {
