@@ -12,7 +12,22 @@ export default {
   },
 
   getHighScores (callback) {
-    axios.get('static/highscore.json')
+    let url = 'api/scores'
+    axios.get(url)
+      .then(response => {
+        callback(null, response)
+      })
+      .catch(e => {
+        callback(e)
+      })
+  },
+
+  saveHighScore ({ user, score }, callback) {
+    let url = 'api/scores'
+    axios.post(url, {
+      name: user,
+      score
+    })
       .then(response => {
         callback(null, response)
       })

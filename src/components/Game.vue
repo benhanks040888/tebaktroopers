@@ -8,9 +8,11 @@
         <img :src="logoUrl" class="photo mb-2">
       </transition>
 
-      <transition-group name="fade" tag="div" class="options">
+      <!-- <transition-group name="fade" tag="div" class="options"> -->
+      <div class="options">
         <button type="button" class="btn btn-outline-primary" @click="onAnswer(option.id)" v-for="option in options" :key="option.id">{{option.name}}</button>
-      </transition-group>
+      </div>
+      <!-- </transition-group> -->
     </div>
 
     <div v-if="gameFinished">
@@ -69,24 +71,28 @@ export default {
       'setCurrentQuestion',
       'increaseAnswerCount',
       'setOptions',
-      'finishGame'
+      'finishGame',
+      'saveScore'
     ]),
     onAnswer (id) {
       if (id === this.currentQuestion.id) {
-        console.log('You are correct!')
         this.increaseAnswerCount()
         if (this.answerCount === this.totalQuestions) {
-          this.finishGame()
-          // save score
+          this.endGame()
         } else {
           this.setCurrentQuestion(this.questions[this.answerCount])
           this.setOptions()
         }
       } else {
-        console.log('Bzzt! You are wrong!')
-        this.finishGame()
-        // save score
+        this.endGame()
       }
+    },
+    endGame () {
+      this.saveScore({
+        user: this.user,
+        score: this.answerCount
+      })
+      this.finishGame()
     }
   }
 }

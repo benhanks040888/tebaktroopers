@@ -52,7 +52,6 @@ const actions = {
   },
 
   setOptions ({ commit, state }) {
-    console.log(state)
     const options = api.getAnswerOptions(state.questions, state.totalQuestions, state.currentQuestion.id)
     commit(types.SET_OPTIONS, { options })
   },
@@ -69,7 +68,24 @@ const actions = {
     commit(types.FINISH_GAME)
   },
 
-  getHighScores ({ commit }) {
+  saveScore ({ commit, rootState, state }, callback) {
+    api.saveHighScore({
+      user: rootState.user.user,
+      score: state.answerCount
+    }, (error, response) => {
+      if (error) {
+        console.log(error)
+        return
+      }
+
+      console.log(response)
+      if (callback) {
+        callback()
+      }
+    })
+  },
+
+  getHighScores ({ commit }, callback) {
     api.getHighScores((error, response) => {
       if (error) {
         console.log(error)
@@ -79,6 +95,10 @@ const actions = {
       let highScores = response.data
 
       commit(types.SET_HIGH_SCORES, { highScores })
+
+      if (callback) {
+        callback()
+      }
     })
   }
 }
