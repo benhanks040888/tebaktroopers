@@ -54,7 +54,7 @@ export default {
         return undefined
       }
 
-      return '../static/people/' + this.currentQuestion.image
+      return 'static/people/' + this.currentQuestion.image
     }
   },
   created () {
