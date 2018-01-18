@@ -27,6 +27,10 @@ export default {
     axios.post(url, {
       name: user,
       score
+    }, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
     })
       .then(response => {
         callback(null, response)

@@ -88,10 +88,7 @@ export default {
       }
     },
     endGame () {
-      this.saveScore({
-        user: this.user,
-        score: this.answerCount
-      })
+      this.saveScore()
       this.finishGame()
     }
   }
