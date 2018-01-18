@@ -34,7 +34,10 @@ module.exports = {
     proxyTable: {
       '/api': {
         target: 'http://localhost/tebaktroopers-api/public',
-        changeOrigin: true
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
       },
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
