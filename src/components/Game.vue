@@ -4,9 +4,11 @@
       <p><strong>{{ user }}</strong></p>
       <p>Score: <strong><span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
 
-      <transition appear name="fade">
-        <img :src="logoUrl" class="photo mb-2">
-      </transition>
+      <div class="photo mb-2">
+        <transition appear name="fade" mode="out-in">
+          <img :key="currentQuestion.id" :src="logoUrl">
+        </transition>
+      </div>
 
       <!-- <transition-group name="fade" tag="div" class="options"> -->
       <div class="options">
@@ -101,7 +103,11 @@ export default {
 }
 
 .photo {
-  max-width: 300px;
+  height: 200px;
+}
+
+.photo img {
+  height: 100%;
 }
 
 .fade-enter-active, .fade-leave-active {

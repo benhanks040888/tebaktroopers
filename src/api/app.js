@@ -1,5 +1,5 @@
 import axios from 'axios'
-import qs from 'qs'
+// import qs from 'qs'
 
 export default {
   getQuestions (callback) {
@@ -25,13 +25,9 @@ export default {
 
   saveHighScore ({ user, score }, callback) {
     let url = 'api/scores'
-    axios.post(url, qs.stringify({
+    axios.post(url, {
       name: user,
       score
-    }), {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
     })
       .then(response => {
         callback(null, response)

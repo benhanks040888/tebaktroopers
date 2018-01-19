@@ -14,6 +14,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import qs from 'qs'
 
 export default {
   name: 'MainMenu',
@@ -22,6 +23,10 @@ export default {
     }
   },
   created () {
+    console.log(qs.stringify({
+      name: 'aaa',
+      score: 4
+    }))
   },
   computed: {
     ...mapGetters([
