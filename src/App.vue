@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="logo">
+      <img src="./assets/logo.svg" alt="TebakTroopers">
+    </div>
     <router-view/>
   </div>
 </template>

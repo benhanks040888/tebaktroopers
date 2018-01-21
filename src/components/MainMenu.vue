@@ -1,6 +1,5 @@
 <template>
   <div class="main-menu">
-    <h1>TebakTroopers</h1>
     <p>Gotta tebak 'em all!</p>
 
     <div class="form-group">
