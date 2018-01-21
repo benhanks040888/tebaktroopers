@@ -58,24 +58,43 @@ export default {
     return array
   },
 
-  getAnswerOptions (questions, totalQuestions, currentQuestionId) {
+  getAnswerOptions (questions, totalQuestions, currentQuestion) {
     let options = []
-    options.push(currentQuestionId)
+    options.push({
+      id: currentQuestion.id,
+      name: currentQuestion.name
+    })
+
+    if (currentQuestion.dummies) {
+      currentQuestion.dummies.map(option => {
+        options.push({
+          id: -1,
+          name: option
+        })
+      })
+    }
 
     while (options.length < 4) {
       let randomNumber = Math.floor(Math.random() * totalQuestions)
-      if (!options.includes(randomNumber)) {
-        options.push(randomNumber)
+      // if (!options.includes(randomNumber)) {
+      if (options.filter(e => e.id === randomNumber).length === 0) {
+        let q = questions[randomNumber]
+        options.push({
+          id: q.id,
+          name: q.name
+        })
       }
     }
+
+    // console.log(options)
 
     options = this.shuffle(options)
 
     return [
-      questions[options[0]],
-      questions[options[1]],
-      questions[options[2]],
-      questions[options[3]]
+      options[0],
+      options[1],
+      options[2],
+      options[3]
     ]
   }
 }

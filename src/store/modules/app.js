@@ -41,7 +41,7 @@ const actions = {
     const answerCount = 0
     const totalQuestions = questions.length
     const currentQuestion = questions[0]
-    const options = api.getAnswerOptions(questions, totalQuestions, currentQuestion.id)
+    const options = api.getAnswerOptions(questions, totalQuestions, currentQuestion)
 
     commit(types.SET_QUESTIONS, { questions })
     commit(types.SET_TOTAL_QUESTIONS, { totalQuestions })
@@ -52,7 +52,7 @@ const actions = {
   },
 
   setOptions ({ commit, state }) {
-    const options = api.getAnswerOptions(state.questions, state.totalQuestions, state.currentQuestion.id)
+    const options = api.getAnswerOptions(state.questions, state.totalQuestions, state.currentQuestion)
     commit(types.SET_OPTIONS, { options })
   },
 

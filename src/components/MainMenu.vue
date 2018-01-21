@@ -8,7 +8,7 @@
     </div>
 
     <router-link to="game" class="btn btn-primary btn-block" :class="{ disabled: !user }">Start</router-link>
-    <router-link to="highscore" class="btn btn-primary btn-block">High Scores</router-link>
+    <router-link to="highscore" class="btn btn-primary btn-link mt-2">See High Scores</router-link>
   </div>
 </template>
 

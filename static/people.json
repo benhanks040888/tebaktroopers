@@ -1,7 +1,11 @@
 [
   {
     "name": "Alexis Sanchez",
-    "image": "1.jpg"
+    "image": "1.jpg",
+    "dummies": [
+      "Alexis Sanches",
+      "Alexis Munchez"
+    ]
   },
   {
     "name": "Paul Pogba",
