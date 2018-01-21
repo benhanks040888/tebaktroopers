@@ -1,4 +1,5 @@
 import { Howl } from 'howler'
+import * as types from '../mutation-types'
 
 const correct = new Howl({
   src: ['../../static/sounds/correct.mp3', '../../static/sounds/correct.ogg'],
@@ -11,9 +12,42 @@ const wrong = new Howl({
 })
 
 const state = {
-  sound: true
+  sound: window.localStorage.getItem('sound') ? JSON.parse(window.localStorage.getItem('sound')) : true
 }
 
 const getters = {
   sound: state => state.sound
+}
+
+const actions = {
+  playSound ({ commit, state }, type) {
+    if (state.sound) {
+      switch (type) {
+        case 'correct':
+          correct.play()
+          break
+        case 'wrong':
+          wrong.play()
+          break
+      }
+    }
+  },
+
+  toggleSound ({ commit }) {
+    commit(types.TOGGLE_SOUND)
+  }
+}
+
+const mutations = {
+  [types.TOGGLE_SOUND] (state) {
+    state.sound = !state.sound
+    window.localStorage.setItem('sound', state.sound)
+  }
+}
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
 }

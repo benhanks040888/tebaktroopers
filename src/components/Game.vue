@@ -74,11 +74,14 @@ export default {
       'increaseAnswerCount',
       'setOptions',
       'finishGame',
-      'saveScore'
+      'saveScore',
+      'playSound'
     ]),
     onAnswer (id) {
       if (id === this.currentQuestion.id) {
+        this.playSound('correct')
         this.increaseAnswerCount()
+
         if (this.answerCount === this.totalQuestions) {
           this.endGame()
         } else {
@@ -86,6 +89,7 @@ export default {
           this.setOptions()
         }
       } else {
+        this.playSound('wrong')
         this.endGame()
       }
     },
