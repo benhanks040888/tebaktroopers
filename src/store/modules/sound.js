@@ -2,12 +2,12 @@ import { Howl } from 'howler'
 import * as types from '../mutation-types'
 
 const correct = new Howl({
-  src: ['../../static/sounds/correct.mp3', '../../static/sounds/correct.ogg'],
+  src: ['static/sounds/correct.mp3', 'static/sounds/correct.ogg'],
   volume: 0.5
 })
 
 const wrong = new Howl({
-  src: ['../../static/sounds/wrong.mp3', '../../static/sounds/wrong.ogg'],
+  src: ['static/sounds/wrong.mp3', 'static/sounds/wrong.ogg'],
   volume: 0.5
 })
 
