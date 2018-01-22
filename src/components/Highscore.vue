@@ -16,7 +16,7 @@
         <tbody>
           <tr v-for="(score, index) in highScores" :class="{ 'table-primary' : index == 0 }">
             <td>#{{ index+1 }}</td>
-            <td>{{ score.name || '' }}</td>
+            <td><img :src="`https://robohash.org/${score.name}?set=set4&size=20x20`" /> {{ score.name || '' }}</td>
             <td>{{ score.score }}</td>
           </tr>
         </tbody>

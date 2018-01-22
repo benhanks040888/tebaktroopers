@@ -1,7 +1,9 @@
 <template>
   <div class="game">
     <div v-if="!gameFinished">
-      <p><strong>{{ user }}</strong></p>
+      <div class="user-avatar">
+        <img :src="`https://robohash.org/${user}?set=set4&size=25x25`" /> <strong>{{ user }}</strong>
+      </div>
       <p>Score: <strong><span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
 
       <div class="photo mb-2">
@@ -21,9 +23,16 @@
       <h1>Game ends!</h1>
       <p><strong>{{ user }}</strong>, you get <span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
 
-      <button type="button" class="btn btn-outline-primary" @click="initializeGame" >Restart Game</button>
+      <div class="score">
+        {{ answerCount }}
+      </div>
 
-      <router-link to="highscore" class="btn btn-primary">See High Scores</router-link>
+      <router-link to="highscore" class="btn btn-link">See High Scores</router-link>
+
+      <hr>
+
+      <button type="button" class="btn btn-outline-primary" @click="initializeGame">Play Again</button>
+
 
     </div>
   </div>
@@ -31,6 +40,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import utils from '../utils'
 
 export default {
   name: 'game',
@@ -58,10 +68,13 @@ export default {
         return undefined
       }
 
-      return 'static/people/' + this.currentQuestion.image
+      return utils.isProduction
+            ? 'https://res.cloudinary.com/hendrasusanto/image/upload/w_200,h_200,c_thumb,g_face/' + 'tebaktroopers/' + this.currentQuestion.image
+            : 'static/people/' + this.currentQuestion.image
     }
   },
   created () {
+    console.log(utils)
     this.initializeQuestions(() => {
       this.initializeGame()
     })
@@ -112,6 +125,20 @@ export default {
 
 .photo img {
   height: 100%;
+}
+
+.score {
+  color: #fff;
+  background: #47A13F;
+  margin: 1em auto;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 .fade-enter-active, .fade-leave-active {
