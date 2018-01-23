@@ -70,7 +70,7 @@ export default {
 
       return utils.isProduction
             ? 'https://res.cloudinary.com/hendrasusanto/image/upload/w_200,h_200,c_thumb,g_face/' + 'tebaktroopers/' + this.currentQuestion.image
-            : 'static/people/' + this.currentQuestion.image
+            : 'static/troopers/' + this.currentQuestion.image
     }
   },
   created () {

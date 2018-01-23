@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
   getQuestions (callback) {
-    axios.get('static/people.json')
+    axios.get('static/troopers.json')
       .then(response => {
         callback(null, response)
       })
