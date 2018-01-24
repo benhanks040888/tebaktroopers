@@ -2,6 +2,26 @@
 # yarn lockfile v1
 
 
+"@fortawesome/fontawesome-common-types@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.1.tgz#28c78607ffd2d246abfcc09bacd28490952280af"
+
+"@fortawesome/fontawesome-pro-light@^5.0.4":
+  version "5.0.4"
+  resolved "https://npm.fontawesome.com/A69A468B-5F07-4299-8118-3D5F2CC65513/@fortawesome/fontawesome-pro-light/-/fontawesome-pro-light-5.0.4.tgz#2c9c78fea1dc0d7baed59bf007559d753d617f26"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.1"
+
+"@fortawesome/fontawesome@^1.1.2":
+  version "1.1.2"
+  resolved "https://npm.fontawesome.com/A69A468B-5F07-4299-8118-3D5F2CC65513/@fortawesome/fontawesome/-/fontawesome-1.1.2.tgz#ddc83c2a747ebd83eb5970eaebfb257aa41c8bb4"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.1"
+
+"@fortawesome/vue-fontawesome@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.0.22.tgz#720457bda0e5866265e5e0f8fe4fbd857fa5653f"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

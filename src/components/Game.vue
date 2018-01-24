@@ -1,39 +1,35 @@
 <template>
-  <div class="game">
-    <div v-if="!gameFinished">
-      <div class="user-avatar">
-        <img :src="`https://robohash.org/${user}?set=set4&size=25x25`" /> <strong>{{ user }}</strong>
-      </div>
-      <p>Score: <strong><span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
+  <div class="container">
+    <div class="game">
+      <div v-if="!gameFinished">
+        <div class="scoreboard">
+          <Avatar :user="user" />
+          <div class="score-container">Score: <strong class="score">{{ answerCount }}</strong></div>
+        </div>
 
-      <div class="photo mb-2">
-        <transition appear name="fade" mode="out-in">
-          <img :key="currentQuestion.id" :src="logoUrl">
-        </transition>
-      </div>
+        <div class="photo">
+          <transition appear name="fade" mode="out-in">
+            <img :key="currentQuestion.id" :src="logoUrl">
+          </transition>
+        </div>
 
-      <!-- <transition-group name="fade" tag="div" class="options"> -->
-      <div class="options">
-        <button type="button" class="btn btn-outline-primary" @click="onAnswer(option.id)" v-for="option in options" :key="option.id">{{option.name}}</button>
-      </div>
-      <!-- </transition-group> -->
-    </div>
-
-    <div v-if="gameFinished">
-      <h1>Game ends!</h1>
-      <p><strong>{{ user }}</strong>, you get <span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
-
-      <div class="score">
-        {{ answerCount }}
+        <div class="options">
+          <button type="button" class="btn btn-outline-primary" @click="onAnswer(option.id)" v-for="option in options" :key="option.id">{{option.name}}</button>
+        </div>
       </div>
 
-      <router-link to="highscore" class="btn btn-link">See High Scores</router-link>
+      <div v-if="gameFinished">
+        <!-- <h1>Game ends!</h1> -->
+        <p><strong>{{ user }}</strong>, you get <span class="highlight">{{ answerCount }}</span>/{{ totalQuestions }}</strong></p>
 
-      <hr>
+        <div>Score: <strong class="score">{{ answerCount }}</strong></div>
 
-      <button type="button" class="btn btn-outline-primary" @click="initializeGame">Play Again</button>
+        <router-link to="highscore" class="btn btn-link"><font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width /> See High Scores</router-link>
 
+        <hr>
 
+        <button type="button" class="btn btn-outline-primary" @click="initializeGame">Play Again</button>
+      </div>
     </div>
   </div>
 </template>
@@ -42,8 +38,15 @@
 import { mapGetters, mapActions } from 'vuex'
 import utils from '../utils'
 
+import Avatar from './Avatar'
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+
 export default {
   name: 'game',
+  components: {
+    Avatar,
+    FontAwesomeIcon
+  },
   beforeRouteEnter (to, from, next) {
     next(vm => {
       if (!vm.user) {
@@ -115,32 +118,71 @@ export default {
 }
 </script>
 
-<style>
-.highlight {
-  color: #41B883;
+<style lang="scss" scoped>
+.game {
+  position: relative;
+}
+
+.scoreboard {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  padding-bottom: 15px;
+  justify-content: space-between;
+
+  @media (min-width: 576px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: none;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.score-container {
+  @media (min-width: 576px) {
+    background: #54216f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    margin-top: 5px;
+
+    .score {
+      color: #fff;
+      font-size: 28px;
+    }
+  }
+}
+
+.score {
+  color: #54216f;
 }
 
 .photo {
-  height: 200px;
+  height: 300px;
+  margin-bottom: 16px;
 }
 
 .photo img {
   height: 100%;
 }
 
-.score {
-  color: #fff;
-  background: #47A13F;
-  margin: 1em auto;
-  border-radius: 100%;
-  width: 80px;
-  height: 80px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
+// .score {
+//   color: #fff;
+//   background: #47A13F;
+//   margin: 1em auto;
+//   border-radius: 100%;
+//   width: 80px;
+//   height: 80px;
+//   font-weight: bold;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 2rem;
+// }
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.25s

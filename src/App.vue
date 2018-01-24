@@ -1,31 +1,38 @@
 <template>
   <div id="app">
-    <div class="logo">
-      <img src="./assets/logo.svg" alt="TebakTroopers">
-    </div>
+    <Logo :class="{'small': thisRouteName !== 'MainMenu'}" />
     <router-view/>
   </div>
 </template>
 
 <script>
+import Logo from './components/Logo'
+import store from './store'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Logo
+  },
+  computed: {
+    thisRouteName () {
+      return store.state.route.name
+    }
+  },
+  created () {
+    console.log(store.state.route)
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
+  font-family: 'Lato', sans-serif;
   color: #323334;
 }
 
 #app {
   max-width: 600px;
-  margin-top: 50px;
-  text-align: center;
+  margin: 50px auto;
 }
 </style>

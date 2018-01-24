@@ -8,7 +8,12 @@ import router from './router'
 
 import App from './App'
 
+import fontawesome from '@fortawesome/fontawesome'
+import proLight from '@fortawesome/fontawesome-pro-light'
+
 sync(store, router)
+
+fontawesome.library.add(proLight)
 
 Vue.config.productionTip = false
 
