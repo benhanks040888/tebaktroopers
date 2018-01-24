@@ -11,6 +11,11 @@ const wrong = new Howl({
   volume: 0.5
 })
 
+const win = new Howl({
+  src: ['static/sounds/win.mp3', 'static/sounds/win.ogg'],
+  volume: 0.5
+})
+
 const state = {
   sound: window.localStorage.getItem('sound') ? JSON.parse(window.localStorage.getItem('sound')) : true
 }
@@ -28,6 +33,9 @@ const actions = {
           break
         case 'wrong':
           wrong.play()
+          break
+        case 'win':
+          win.play()
           break
       }
     }

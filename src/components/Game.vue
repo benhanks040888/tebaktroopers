@@ -92,12 +92,13 @@ export default {
     ]),
     onAnswer (id) {
       if (id === this.currentQuestion.id) {
-        this.playSound('correct')
         this.increaseAnswerCount()
 
         if (this.answerCount === this.totalQuestions) {
+          this.playSound('win')
           this.endGame()
         } else {
+          this.playSound('correct')
           this.setCurrentQuestion(this.questions[this.answerCount])
           this.setOptions()
         }
