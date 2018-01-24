@@ -27,12 +27,70 @@ export default {
 
 <style lang="scss">
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #323334;
 }
 
 #app {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 30px auto;
+}
+
+.btn-mrm {
+  color: #fff;
+
+  &,
+  &.disabled,
+  &:disabled {
+    background-color: #54216f;
+    border-color: #54216f;
+  }
+
+  &:hover,
+  &.active {
+    color: #fff;
+    background-color: #8e44ad;
+    border-color: #8e44ad;
+  }
+}
+
+.btn-link-mrm {
+  font-weight: 400;
+  color: #54216f;
+  background-color: transparent;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: all ease .3s;
+    background-color: currentColor;
+  }
+
+  &:hover {
+    color: #54216f;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.btn-outline-mrm {
+  color: #54216f;
+  background-color: transparent;
+  border-color: #54216f;
+
+  &:hover {
+    color: #fff;
+    background-color: #54216f;
+    border-color: #54216f;
+  }
 }
 </style>

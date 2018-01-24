@@ -10,7 +10,7 @@
             <h2 class="h4 text-center">High Scores</h2>
             <div v-if="highScores.length > 0">
               <div v-for="(score, index) in highScores" class="leaderboard-item" :class="{ 'first-place' : index == 0 }">
-                <span class="leaderboard-icon" v-if="index == 0">
+                <span class="leaderboard-item-icon" v-if="index == 0">
                   <font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width/>
                 </span>
                 <span class="leaderboard-item-number">
@@ -28,7 +28,7 @@
           </div>
 
           <div class="mt-4 text-center">
-            <router-link to="/" class="btn btn-outline-primary"><font-awesome-icon :icon="['fal', 'chevron-left']" fixed-width /> Back to Main Menu</router-link>
+            <router-link to="/" class="btn btn-outline-mrm"><font-awesome-icon :icon="['fal', 'chevron-left']" fixed-width /> Back to Main Menu</router-link>
           </div>
         </div>
 

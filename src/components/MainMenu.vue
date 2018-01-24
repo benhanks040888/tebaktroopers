@@ -11,10 +11,10 @@
               <input type="text" v-model="name" class="form-control" placeholder="What's your name?" @change="setUser(name)">
             </div>
 
-            <router-link to="game" class="btn btn-primary btn-block" :class="{ disabled: !user }">Start</router-link>
+            <router-link to="game" class="btn btn-mrm btn-block" :class="{ disabled: !user }">Start</router-link>
 
             <div class="text-center mt-3">
-              <router-link to="highscore" class="btn btn-link">
+              <router-link to="highscore" class="btn btn-link-mrm">
                 <font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width /> See High Scores
               </router-link>
             </div>

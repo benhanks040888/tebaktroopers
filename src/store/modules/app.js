@@ -14,6 +14,7 @@ const state = {
 const getters = {
   questions: state => state.questions,
   answerCount: state => state.answerCount,
+  didWin: state => state.answerCount !== 0 && state.answerCount === state.totalQuestions,
   totalQuestions: state => state.totalQuestions,
   currentQuestion: state => state.currentQuestion,
   options: state => state.options,

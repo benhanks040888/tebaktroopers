@@ -18,8 +18,7 @@
   font-size: 18px;
   border: none;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  background: #54216f;
-  color: #fff;
+  background: #f1f2f6;
 
   *:not(:last-child) {
     margin-bottom: 16px;

@@ -1,7 +1,7 @@
 <template>
   <div class="user-avatar">
     <img :src="`https://robohash.org/${user}?set=set4&size=25x25`" />
-    <strong>{{ user }}</strong>
+    <span>{{ user }}</span>
   </div>
 </template>
 
