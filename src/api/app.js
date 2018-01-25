@@ -23,11 +23,12 @@ export default {
       })
   },
 
-  saveHighScore ({ user, score }, callback) {
+  saveHighScore ({ user, score, wrongAnswer }, callback) {
     let url = 'api/scores'
     axios.post(url, {
       name: user,
-      score
+      score,
+      wrong_answer: wrongAnswer
     })
       .then(response => {
         callback(null, response)

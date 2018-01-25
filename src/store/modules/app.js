@@ -72,7 +72,8 @@ const actions = {
   saveScore ({ commit, rootState, state }, callback) {
     api.saveHighScore({
       user: rootState.user.user,
-      score: state.answerCount
+      score: state.answerCount,
+      wrongAnswer: state.answerCount === state.questions.length ? '' : state.currentQuestion.name
     }, (error, response) => {
       if (error) {
         console.log(error)
