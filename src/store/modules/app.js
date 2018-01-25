@@ -79,7 +79,6 @@ const actions = {
         return
       }
 
-      console.log(response)
       if (callback) {
         callback()
       }

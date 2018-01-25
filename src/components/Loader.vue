@@ -23,7 +23,6 @@ export default {
 
 <style lang="scss" scoped>
 .loader {
-  font-family: 'Lato', serif;
   position: relative;
   font-size: 24px;
   animation: blink 2s ease-in-out infinite forwards;

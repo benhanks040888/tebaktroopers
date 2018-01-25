@@ -7,24 +7,28 @@
             <Loader />
           </div>
           <div v-else>
-            <h2 class="h4 text-center">High Scores</h2>
-            <div v-if="highScores.length > 0">
-              <div v-for="(score, index) in highScores" class="leaderboard-item" :class="{ 'first-place' : index == 0 }">
-                <span class="leaderboard-item-icon" v-if="index == 0">
-                  <font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width/>
-                </span>
-                <span class="leaderboard-item-number">
-                  {{ index+1 }}
-                </span>
-                <span class="leaderboard-item-avatar">
-                  <Avatar :user="score.name" />
-                </span>
-                <span class="leaderboard-item-score">{{ score.score }}</span>
+            <transition appear name="fade" mode="out-in">
+              <h2 class="page-heading">High Scores</h2>
+            </transition>
+            <transition appear name="fade" mode="out-in">
+              <div v-if="highScores.length > 0">
+                <div v-for="(score, index) in highScores" class="leaderboard-item" :class="{ 'first-place' : index == 0 }">
+                  <span class="leaderboard-item-icon" v-if="index == 0">
+                    <font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width/>
+                  </span>
+                  <span class="leaderboard-item-number">
+                    {{ index+1 }}
+                  </span>
+                  <span class="leaderboard-item-avatar">
+                    <Avatar :user="score.name" />
+                  </span>
+                  <span class="leaderboard-item-score">{{ score.score }}</span>
+                </div>
               </div>
-            </div>
-            <div v-if="highScores.length == 0">
-              <p>There are no high scores yet. You could be the first one to chart here!</p>
-            </div>
+              <div v-if="highScores.length == 0">
+                <p>There are no high scores yet. You could be the first one to chart here!</p>
+              </div>
+            </transition>
           </div>
 
           <div class="mt-4 text-center">
@@ -74,6 +78,14 @@ export default {
 </script>
 
 <style lang="scss">
+.page-heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 28px;
+  text-align: center;
+}
+
 .leaderboard-item {
   position: relative;
   border-radius: 4px;
@@ -146,5 +158,12 @@ export default {
   20%, 40% {
     transform: translateY(0);
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>

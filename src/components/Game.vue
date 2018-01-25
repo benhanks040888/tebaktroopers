@@ -9,7 +9,7 @@
 
         <div class="photo">
           <transition appear name="fade" mode="out-in">
-            <img class="img-fluid" :key="currentQuestion.id" :src="logoUrl">
+            <img class="img-fluid" :key="currentQuestion.id" :src="photoUrl">
           </transition>
         </div>
 
@@ -18,49 +18,7 @@
         </div>
       </div>
 
-      <div v-if="gameFinished">
-        <div class="row">
-          <div class="col-sm">
-            <div v-if="!didWin">
-              <div class="photo full no-margin">
-                <transition appear name="fade">
-                  <img :key="currentQuestion.id" :src="logoUrl">
-                </transition>
-              </div>
-              <div class="insult-container">
-                <p>My name is <strong>{{ currentQuestion.name }}</strong>.</p>
-                <div class="insult-quote">
-                  &ldquo;{{ insult }}&rdquo;
-                  <br><font-awesome-icon :icon="['fal', 'frown']" fixed-width />
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div class="photo full no-margin">
-                <transition appear name="fade">
-                  <img src="https://media.giphy.com/media/xNBcChLQt7s9a/giphy.gif" alt="FTW Win!">
-                </transition>
-              </div>
-              <div class="insult-container">
-                <div class="insult-quote">
-                  &ldquo;Kamu HRD ya? Hebat!&rdquo;
-                  <br><font-awesome-icon :icon="['fal', 'smile']" fixed-width />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-5">
-            <div class="pt-2">
-              <p><strong>{{ user }}</strong>, your score is <strong class="score">{{ answerCount }}</strong></p>
-              <p><button type="button" class="btn btn-mrm" @click="initializeGame"><font-awesome-icon :icon="['fal', 'repeat']" fixed-width /> Play Again</button></p>
-
-              <router-link to="highscore" class="btn btn-sm btn-link-mrm"><font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width /> See High Scores</router-link>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
+      <result-page v-if="gameFinished"></result-page>
     </div>
   </div>
 </template>
@@ -70,12 +28,14 @@ import { mapGetters, mapActions } from 'vuex'
 import utils from '../utils'
 
 import Avatar from './Avatar'
+import ResultPage from './ResultPage'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
 export default {
   name: 'game',
   components: {
     Avatar,
+    ResultPage,
     FontAwesomeIcon
   },
   beforeRouteEnter (to, from, next) {
@@ -98,13 +58,13 @@ export default {
       'didWin',
       'gameFinished'
     ]),
-    logoUrl () {
+    photoUrl () {
       if (!this.currentQuestion.image) {
         return undefined
       }
 
       return utils.isProduction
-            ? 'https://res.cloudinary.com/hendrasusanto/image/upload/w_200,h_200,c_thumb,g_face/' + 'troopers/' + this.currentQuestion.image
+            ? 'https://res.cloudinary.com/hendrasusanto/image/upload/w_300,h_300,c_thumb,g_face/' + 'troopers/' + this.currentQuestion.image
             : 'static/troopers/' + this.currentQuestion.image
     },
     insult () {
@@ -116,11 +76,11 @@ export default {
         'Cukup tau aja.'
       ]
       let randomNumber = Math.floor(Math.random() * insults.length)
+      console.log(randomNumber)
       return insults[randomNumber]
     }
   },
   created () {
-    console.log(utils)
     this.initializeQuestions(() => {
       this.initializeGame()
     })
@@ -161,7 +121,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .game {
   position: relative;
 }
@@ -227,32 +187,6 @@ export default {
     }
   }
 }
-
-.insult-container {
-  text-align: center;
-  background: #eaeaea;
-  padding: 10px;
-}
-
-.insult-quote {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic;
-  font-size: 20px;
-}
-
-// .score {
-//   color: #fff;
-//   background: #47A13F;
-//   margin: 1em auto;
-//   border-radius: 100%;
-//   width: 80px;
-//   height: 80px;
-//   font-weight: bold;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 2rem;
-// }
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.25s

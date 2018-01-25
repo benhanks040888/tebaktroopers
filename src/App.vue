@@ -18,9 +18,6 @@ export default {
     thisRouteName () {
       return store.state.route.name
     }
-  },
-  created () {
-    console.log(store.state.route)
   }
 }
 </script>
@@ -66,7 +63,8 @@ body {
     content: '';
     position: absolute;
     bottom: 4px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 1px;
     transition: all ease .3s;
