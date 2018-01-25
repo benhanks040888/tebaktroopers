@@ -3,22 +3,26 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          <rule-card />
+          <transition appear name="fade">
+            <rule-card />
+          </transition>
         </div>
         <div class="col-sm">
-          <div class="py-3">
-            <div class="form-group">
-              <input type="text" v-model="name" class="form-control" placeholder="What's your name?" @change="setUser(name)">
-            </div>
+          <transition appear name="fade" :duration="25000">
+            <div class="py-3">
+              <div class="form-group">
+                <input type="text" v-model="name" class="form-control" placeholder="What's your name?" @change="setUser(name)">
+              </div>
 
-            <router-link to="game" class="btn btn-mrm btn-block" :class="{ disabled: !user }">Start</router-link>
+              <router-link to="game" class="btn btn-mrm btn-block" :class="{ disabled: !user }">Start</router-link>
 
-            <div class="text-center mt-3">
-              <router-link to="highscore" class="btn btn-link-mrm">
-                <font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width /> See High Scores
-              </router-link>
+              <div class="text-center mt-3">
+                <router-link to="highscore" class="btn btn-link-mrm">
+                  <font-awesome-icon :icon="['fal', 'trophy-alt']" fixed-width /> See High Scores
+                </router-link>
+              </div>
             </div>
-          </div>
+          </transition>
         </div>
       </div>
     </div>

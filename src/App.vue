@@ -23,9 +23,15 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
   color: #323334;
+  background-color: transparent;
 }
 
 #app {
@@ -90,5 +96,12 @@ body {
     background-color: #54216f;
     border-color: #54216f;
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
 }
 </style>

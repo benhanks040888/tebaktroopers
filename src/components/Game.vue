@@ -188,13 +188,6 @@ export default {
   }
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.25s
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
-
 .options {
   display: grid;
   grid-template-columns: 1fr 1fr;
