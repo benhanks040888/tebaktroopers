@@ -22,54 +22,76 @@
     "dummies": []
   },
   {
-    "name": "Saipul Anwar",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Windriyanto",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Pajar Setia Ningsih",
     "image": "5.jpg",
     "dummies": []
   },
   {
-    "name": "Riski Yulisetianie",
-    "image": "",
-    "dummies": []
+    "name": "Adinda Kusuma",
+    "image": "6.jpg",
+    "dummies": [
+      "Adinda Koeshendratmo",
+      "Adinda Kusumawati"
+    ]
   },
   {
     "name": "Agni Isa Ambara",
-    "image": "",
+    "image": "7.jpg",
     "dummies": []
   },
   {
-    "name": "Gery Irvandi",
-    "image": "",
+    "name": "Anggiyandra Rahmadanti",
+    "image": "9.jpg",
+    "dummies": [
+      "Anggi Ramadani",
+      "Anggiandra Rahmadani"
+    ]
+  },
+  {
+    "name": "Cahyo Karno Putro",
+    "image": "8.jpg",
+    "dummies": [
+      "Cahyo Wibi",
+      "Imam Wibawa"
+    ]
+  },
+  {
+    "name": "Cenmidtal Cuaca Mulyanto",
+    "image": "10.jpg",
+    "dummies": [
+      "Cenmidtal Tjuaca Mulyanto",
+      "Cenmidtal Cuaca Mulyono",
+      "Cenmidtal Tjuaca Mulyono"
+    ]
+  },
+  {
+    "name": "Cornelius Vito",
+    "image": "11.jpg",
+    "dummies": [
+      "Cornelius Fito"
+    ]
+  },
+  {
+    "name": "Daniel Rama van Leeuwen",
+    "image": "38.jpg",
+    "dummies": [
+      "Daniel van Luwen",
+      "Daniel van Niel",
+      "Daniel van der Meer"
+    ]
+  },
+  {
+    "name": "Desca Ardhi Yudha",
+    "image": "37.jpg",
     "dummies": []
   },
   {
-    "name": "Edward",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Nadiyah Wulandari",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Intan Parameswari Kusumoputri",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Jeffrey Pesuarissa",
-    "image": "",
-    "dummies": []
+    "name": "Dody Mardiansyah",
+    "image": "12.jpg",
+    "dummies": [
+      "Dody Mardianto",
+      "Dody Marianto"
+    ]
   },
   {
     "name": "Dwi Sutanto",
@@ -77,53 +99,74 @@
     "dummies": []
   },
   {
-    "name": "Muhammad Hasbul Hadi",
-    "image": "",
+    "name": "Edward",
+    "image": "42.jpg",
+    "dummies": [
+      "Edo Manurung",
+      "Eduardo Manurung",
+      "Edward Siahaan"
+    ]
+  },
+  {
+    "name": "Garth Parlimbangan",
+    "image": "13.jpg",
     "dummies": []
   },
   {
-    "name": "Renick Marlon Tjendarakusuma",
-    "image": "",
-    "dummies": []
+    "name": "Gery Irvandi",
+    "image": "14.jpg",
+    "dummies": [
+      "Gery Halim"
+    ]
   },
   {
-    "name": "Irma Septiani",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Mochamad Chusnanda",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Hendry Wibisono",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Ali Abidin",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Alamsyah",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Refika Yasmine",
+    "name": "Hendra Maulana",
     "image": "",
     "dummies": []
   },
   {
     "name": "Hendra Susanto",
-    "image": "",
+    "image": "28.jpg",
+    "dummies": [
+      "Hendri Susanto",
+      "Hendro Susanto",
+      "Susanto"
+    ]
+  },
+  {
+    "name": "Hendry Wibisono",
+    "image": "26.jpg",
+    "dummies": [
+      "Hendra Wibisono",
+      "Hendri Wijaya"
+    ]
+  },
+  {
+    "name": "Indah Pratiwi Pribadi",
+    "image": "32.jpg",
     "dummies": []
   },
   {
-    "name": "Kanya Drestanti",
-    "image": "",
+    "name": "Intan Parameswari Kusumoputri",
+    "image": "25.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Jeffrey Pesuarissa",
+    "image": "51.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Mohamad Kemal Saleh",
+    "image": "52.jpg",
+    "dummies": [
+      "Kemal Patel",
+      "Kemal Palevi"
+    ]
+  },
+  {
+    "name": "Muhammad Hasbul Hadi",
+    "image": "24.jpg",
     "dummies": []
   },
   {
@@ -132,8 +175,45 @@
     "dummies": []
   },
   {
-    "name": "Indah Pratiwi Pribadi",
-    "image": "",
+    "name": "Nadia Rarasati Putri",
+    "image": "23.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Nadiyah Wulandari",
+    "image": "22.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Pandu Attahiyyat",
+    "image": "21.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Priskila Setyaningrum",
+    "image": "19.jpg",
+    "dummies": [
+      "Aurel Hermansyah"
+    ]
+  },
+  {
+    "name": "Refika Yasmine",
+    "image": "18.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Renick Marlon Tjendarakusuma",
+    "image": "20.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Riski Yulisetianie",
+    "image": "17.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Saipul Anwar",
+    "image": "78.jpg",
     "dummies": []
   },
   {
@@ -142,310 +222,138 @@
     "dummies": []
   },
   {
-    "name": "Anggiyandra Rahmadanti",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Kemal Saleh",
-    "image": "",
-    "dummies": [
-      "Kemal Patel",
-      "Kemal Palevi"
-    ]
-  },
-  {
-    "name": "Galih Fajar Firstyanto",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Okky Fachrudin",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Daniel Van Leeuwen",
-    "image": "",
-    "dummies": [
-      "Daniel Van Raalte",
-      "Daniel Van Niel",
-      "Daniel Van der Meer"
-    ]
-  },
-  {
-    "name": "Farah Veraniza",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Dyani Mustikarini",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Daniel Hagmeijer",
-    "image": "",
-    "dummies": [
-      "Daniel Hemminck",
-      "Daniel Hagerman",
-      "Daniel Hamaier"
-    ]
-  },
-  {
-    "name": "Ade Iskandar",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Raden Astra Djoko Damamtoro",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Heriyanto Makmur",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Cenmidtal Cuaca Mulyanto",
-    "image": "",
-    "dummies": [
-      "Cenmidtal Tjuaca Mulyanto",
-      "Cenmidtal Cuaca Mulyono",
-      "Cenmidtal Tjuaca Mulyono"
-    ]
-  },
-  {
-    "name": "Adinda Kusuma",
-    "image": "",
-    "dummies": [
-      "Adinda Koeshendratmo"
-    ]
-  },
-  {
-    "name": "Dian Yopita",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Engkus Kusdiana",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Didin Awaludin",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Dessy Devita",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Desca Ardhi Yudha",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Priskila Setyaningrum",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Dody Mardiansyah",
-    "image": "",
-    "dummies": [
-      "Dody Marianto"
-    ]
-  },
-  {
-    "name": "Satriyo Bagus Cahyo Putra",
-    "image": "",
+    "name": "Satriyo Bagus",
+    "image": "16.jpg",
     "dummies": [
       "Bagus Satriyo",
       "Bagus Hutomo"
     ]
   },
   {
+    "name": "Shandy Ardiansyah Abdurrasyid",
+    "image": "15.jpg",
+    "dummies": [
+      "Sandi Adrian"
+    ]
+  },
+  {
     "name": "Tesia Gita",
+    "image": "31.jpg",
+    "dummies": [
+      "Tesia Kaunang",
+      "Tesia Cita"
+    ]
+  },
+  {
+    "name": "Windriyanto",
     "image": "",
     "dummies": []
   },
   {
     "name": "Zunainah",
-    "image": "",
+    "image": "39.jpg",
+    "dummies": [
+      "Zunenah",
+      "Zunailah"
+    ]
+  },
+  {
+    "name": "Okky Fachrudin",
+    "image": "46.jpg",
     "dummies": []
   },
   {
+    "name": "Aditya Putra Anugerah Gusti",
+    "image": "41.jpg",
+    "dummies": [
+      "Sjamsudin Anugerah",
+      "Aditya Sutrisno",
+      "Aditya Alamudin"
+    ]
+  },
+  {
+    "name": "Syamsiar Agustina",
+    "image": "94.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Daniel Hagmeijer",
+    "image": "93.jpg",
+    "dummies": [
+      "Daniel Hemminck",
+      "Daniel Hajmeier",
+      "Daniel Hamaier"
+    ]
+  },
+  {
+    "name": "Galih Fajar Firstyanto",
+    "image": "47.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Kanya Drestanti",
+    "image": "43.jpg",
+    "dummies": []
+  },
+  {
+    "name": "M. Fajar Kuntoro",
+    "image": "50.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Raden Astra Djoko Damamtoro",
+    "image": "27.jpg",
+    "dummies": [
+      "Raden Astra Wijaya",
+      "Raden Astra Wijoyo"
+    ]
+  },
+  {
     "name": "Agung Wicaksono",
-    "image": "",
+    "image": "95.jpg",
     "dummies": [
       "Agung Darmawan"
     ]
   },
   {
-    "name": "Jefferson Setiawan",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Mangesti Nugraheni",
-    "image": "",
-    "dummies": [
-      "Esti Sukaesih"
-    ]
-  },
-  {
-    "name": "Ina Rizkia",
-    "image": "",
-    "dummies": [
-      "Nia Rizkia"
-    ]
-  },
-  {
-    "name": "Erwanda",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Annisa Rachma Sarah Pardede",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Deena Al-rizzky Suprapto",
-    "image": "",
+    "name": "Aisya Zalikha Putri",
+    "image": "96.jpg",
     "dummies": []
   },
   {
     "name": "Intan Wangge",
-    "image": "",
+    "image": "44.jpg",
     "dummies": [
       "Intan Andini"
     ]
   },
   {
-    "name": "Ryou Sekine",
-    "image": "",
-    "dummies": [
-      "Ryu Sekine",
-      "Ryo Sekine"
-    ]
+    "name": "Andiasti Ajani",
+    "image": "97.jpg",
+    "dummies": []
   },
   {
-    "name": "Nunuk Wiharyadi",
+    "name": "Andri Irawan",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Tarjuki Eche",
+    "name": "Annisa",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Michael",
+    "name": "Annisa Rachma Sarah Pardede",
+    "image": "29.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Arifin",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Sharinna Tasha Stamboel",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Mira Arianti",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Caroline Purnawan",
-    "image": "",
-    "dummies": [
-      "Catherine Purnawan",
-      "Christine Purnawan",
-      "Claudia Purnawan"
-    ]
-  },
-  {
-    "name": "Hasna Tsaniya Rananti",
-    "image": "",
-    "dummies": [
-      "Nia Wulandari"
-    ]
-  },
-  {
-    "name": "Yhanuar Ismail Purbokusumo",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "M. Fajar Kuntoro",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Pandu Attahiyyat",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Nadia Rarasati Putri",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Cornelius Vito Pascal Pradhana",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Gery Halim",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Cahyo Karno Putro",
-    "image": "",
-    "dummies": [
-      "Wibi Cahyo"
-    ]
-  },
-  {
-    "name": "Aditya Putra Anugerah Gusti",
-    "image": "",
-    "dummies": [
-      "Udin"
-    ]
-  },
-  {
-    "name": "Shandy Ardiansyah Abdurrasyid",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Abi Rafdi",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Khairani Tasrida",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Alif Ibrahim",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Patrick Soe",
-    "image": "",
-    "dummies": []
-  },
-  {
-    "name": "Mochamad Sidik Permana",
+    "name": "Bang Debby Natalia Kurnia Christianto",
     "image": "",
     "dummies": []
   },
@@ -456,37 +364,330 @@
   },
   {
     "name": "Cintantya Sekarkinanthi",
+    "image": "98.jpg",
+    "dummies": [
+      "Cita Sekarwati"
+    ]
+  },
+  {
+    "name": "Deena Al-Rizzky Suprapto",
+    "image": "35.jpg",
+    "dummies": [
+      "Dena Altalia",
+      "Deena Arini"
+    ]
+  },
+  {
+    "name": "Dian Nurlizta Aryani",
+    "image": "79.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Doppy Catur Prasetya",
+    "image": "82.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Erwanda",
+    "image": "36.jpg",
+    "dummies": [
+      "Erwin"
+    ]
+  },
+  {
+    "name": "Yogha Prasiddhamukti",
+    "image": "80.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Fadhli Faizal",
+    "image": "81.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Fazhar Dwitiawan Putra",
     "image": "",
+    "dummies": []
+  },
+  {
+    "name": "Galih Pradana Risjad",
+    "image": "83.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Gery Halim",
+    "image": "84.jpg",
+    "dummies": [
+      "Gary Halim"
+    ]
+  },
+  {
+    "name": "Gienah Richi Mustafa",
+    "image": "85.jpg",
+    "dummies": [
+      "Ghea Richi Ananda"
+    ]
+  },
+  {
+    "name": "Heriyanto Makmur",
+    "image": "",
+    "dummies": []
+  },
+  {
+    "name": "Ina Rizkia",
+    "image": "48.jpg",
+    "dummies": [
+      "Nia Rizkia"
+    ]
+  },
+  {
+    "name": "Inez Elika",
+    "image": "86.jpg",
+    "dummies": [
+      "Inez Agrida",
+      "Ines Elika"
+    ]
+  },
+  {
+    "name": "Isabella Wiranata Khosasmara",
+    "image": "87.png",
+    "dummies": []
+  },
+  {
+    "name": "Kevin Wijaya",
+    "image": "53.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Khairani Tasrida",
+    "image": "88.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Mandha Wicaksono",
+    "image": "89.jpg",
+    "dummies": [
+      "Mandhawy Wicaksono",
+      "Manda Wicaksono"
+    ]
+  },
+  {
+    "name": "Mangesti Nugraheni",
+    "image": "30.jpg",
+    "dummies": [
+      "Esti Nuraini",
+      "Mangesti Nuraini"
+    ]
+  },
+  {
+    "name": "Maynard Rahadian Dirgantara",
+    "image": "90.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Mega Novita",
+    "image": "91.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Michael",
+    "image": "34.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Patrick Soe",
+    "image": "",
+    "dummies": []
+  },
+  {
+    "name": "Rangga Puja Pratama",
+    "image": "92.jpg",
     "dummies": []
   },
   {
     "name": "Rizka Dwi Putri Amanda",
+    "image": "54.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Sandi Utomo",
+    "image": "55.jpg",
+    "dummies": [
+      "Shandy Utomo"
+    ]
+  },
+  {
+    "name": "Sharinna Tasha Stamboel",
+    "image": "49.jpg",
+    "dummies": [
+      "Tasya Stambul"
+    ]
+  },
+  {
+    "name": "Sherly Christine",
+    "image": "56.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Siti Rachmanissa Maharani",
+    "image": "57.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Stephanie Ayu Lestari",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Vhenessya Livia Claudhya Gultom",
+    "name": "Stephanie Dova",
+    "image": "58.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Terosha Reynanda Nadella P",
+    "image": "59.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Vira Mutiara Hadits",
+    "image": "60.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Yehezkiel Jefferson",
+    "image": "61.jpg",
+    "dummies": [
+      "Jefferson Setiawan"
+    ]
+  },
+  {
+    "name": "Yhanuar Ismail Purbokusumo",
+    "image": "62.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Yudhita Riadini",
+    "image": "63.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Yulita Alvernia Wijaya",
+    "image": "64.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Engkus Kusdiana",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Inez Elika",
+    "name": "Fitria Nurul Rohmah",
+    "image": "65.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Purnowo Arief Prawidya",
+    "image": "66.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Ryou Sekine",
+    "image": "40.jpg",
+    "dummies": [
+      "Ryu Sekine",
+      "Ryo Sekine"
+    ]
+  },
+  {
+    "name": "Tarjuki Eche",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Sandi Andrian",
+    "name": "Yoga Pradipta Ramadhan",
+    "image": "67.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Alif Ibrahim",
+    "image": "68.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Caroline Purnawan",
+    "image": "69.jpg",
+    "dummies": [
+      "Catherine Purnawan",
+      "Christine Purnawan",
+      "Claudia Purnawan"
+    ]
+  },
+  {
+    "name": "Fransisca Rhea Danaparamita",
+    "image": "70.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Jefferson Setiawan",
+    "image": "33.jpg",
+    "dummies": [
+      "Yehezkiel Jefferson",
+      "Jefferson Wijaya"
+    ]
+  },
+  {
+    "name": "Nunuk Wiharyadi",
+    "image": "45.jpg",
+    "dummies": [
+      "Dedy Ibnu",
+      "Nunuk Wiryanto"
+    ]
+  },
+  {
+    "name": "Rahmatullah Akbar",
+    "image": "71.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Sarah Azizah",
+    "image": "72.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Soraya Apriliyanti",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Hendra Maulana",
+    "name": "Abi Rafdi",
+    "image": "73.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Hasna Tsaniya Rananti",
+    "image": "74.jpg",
+    "dummies": [
+      "Nia Wulandari"
+    ]
+  },
+  {
+    "name": "Loddy Andrian Putra",
     "image": "",
     "dummies": []
   },
   {
-    "name": "Aisya Zalikha Putri",
-    "image": "",
+    "name": "Mochamad Sidik Permana",
+    "image": "75.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Nesti Agrida",
+    "image": "76.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Putri Kerstiawati",
+    "image": "77.jpg",
     "dummies": []
   }
 ]
