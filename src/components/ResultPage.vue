@@ -4,7 +4,7 @@
       <div v-if="!didWin">
         <div class="photo full no-margin">
           <transition appear name="fade">
-            <img :key="currentQuestion.id" :src="logoUrl">
+            <img :key="currentQuestion.id" :src="photoUrl">
           </transition>
         </div>
         <div class="insult-container">
@@ -41,6 +41,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import utils from '../utils'
 
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
@@ -67,6 +68,15 @@ export default {
       'currentQuestion',
       'didWin'
     ]),
+    photoUrl () {
+      if (!this.currentQuestion.image) {
+        return undefined
+      }
+
+      return utils.isProduction
+            ? 'https://res.cloudinary.com/hendrasusanto/image/upload/w_300,h_300,c_thumb,g_face/' + 'troopers/' + this.currentQuestion.image
+            : 'static/troopers/' + this.currentQuestion.image
+    },
     insult () {
       let randomNumber = Math.floor(Math.random() * this.insults.length)
       console.log(randomNumber)
@@ -81,7 +91,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.photo {
+  height: 300px;
+  margin-bottom: 16px;
+  text-align: center;
+
+  img {
+    height: 100%;
+  }
+
+  &.no-margin {
+    margin-bottom: 0;
+  }
+
+  &.full {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 .insult-container {
   text-align: center;
   background: #eaeaea;

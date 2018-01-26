@@ -94,11 +94,6 @@
     ]
   },
   {
-    "name": "Dwi Sutanto",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Edward",
     "image": "42.jpg",
     "dummies": [
@@ -118,11 +113,6 @@
     "dummies": [
       "Gery Halim"
     ]
-  },
-  {
-    "name": "Hendra Maulana",
-    "image": "",
-    "dummies": []
   },
   {
     "name": "Hendra Susanto",
@@ -170,11 +160,6 @@
     "dummies": []
   },
   {
-    "name": "Muhammad Sholeh",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Nadia Rarasati Putri",
     "image": "23.jpg",
     "dummies": []
@@ -217,11 +202,6 @@
     "dummies": []
   },
   {
-    "name": "Sanuri",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Satriyo Bagus",
     "image": "16.jpg",
     "dummies": [
@@ -243,11 +223,6 @@
       "Tesia Kaunang",
       "Tesia Cita"
     ]
-  },
-  {
-    "name": "Windriyanto",
-    "image": "",
-    "dummies": []
   },
   {
     "name": "Zunainah",
@@ -333,13 +308,8 @@
     "dummies": []
   },
   {
-    "name": "Andri Irawan",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Annisa",
-    "image": "",
+    "image": "99.jpg",
     "dummies": []
   },
   {
@@ -353,7 +323,7 @@
     "dummies": []
   },
   {
-    "name": "Bang Debby Natalia Kurnia Christianto",
+    "name": "Debby Natalia",
     "image": "",
     "dummies": []
   },
@@ -429,11 +399,6 @@
     ]
   },
   {
-    "name": "Heriyanto Makmur",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Ina Rizkia",
     "image": "48.jpg",
     "dummies": [
@@ -450,7 +415,7 @@
   },
   {
     "name": "Isabella Wiranata Khosasmara",
-    "image": "87.png",
+    "image": "87.jpg",
     "dummies": []
   },
   {
@@ -496,7 +461,7 @@
   },
   {
     "name": "Patrick Soe",
-    "image": "",
+    "image": "100.jpg",
     "dummies": []
   },
   {
@@ -535,13 +500,17 @@
   },
   {
     "name": "Stephanie Ayu Lestari",
-    "image": "",
-    "dummies": []
+    "image": "101.jpg",
+    "dummies": [
+      "Stephanie Dova"
+    ]
   },
   {
     "name": "Stephanie Dova",
     "image": "58.jpg",
-    "dummies": []
+    "dummies": [
+      "Stephanie Lukito"
+    ]
   },
   {
     "name": "Terosha Reynanda Nadella P",
@@ -576,11 +545,6 @@
     "dummies": []
   },
   {
-    "name": "Engkus Kusdiana",
-    "image": "",
-    "dummies": []
-  },
-  {
     "name": "Fitria Nurul Rohmah",
     "image": "65.jpg",
     "dummies": []
@@ -597,11 +561,6 @@
       "Ryu Sekine",
       "Ryo Sekine"
     ]
-  },
-  {
-    "name": "Tarjuki Eche",
-    "image": "",
-    "dummies": []
   },
   {
     "name": "Yoga Pradipta Ramadhan",

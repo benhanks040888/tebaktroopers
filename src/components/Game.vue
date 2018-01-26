@@ -7,14 +7,16 @@
           <div class="score-container">Score: <strong class="score">{{ answerCount }}</strong></div>
         </div>
 
-        <div class="photo">
-          <transition appear name="fade" mode="out-in">
-            <img class="img-fluid" :key="currentQuestion.id" :src="photoUrl">
+        <div class="polaroid-container">
+          <transition appear name="polaroid" mode="out-in">
+            <div class="polaroid" :key="currentQuestion.id">
+              <img class="img-fluid" :src="photoUrl">
+            </div>
           </transition>
         </div>
 
         <div class="options">
-          <button type="button" class="btn btn-outline-mrm" @click="onAnswer(option.id)" v-for="option in options" :key="option.id">{{option.name}}</button>
+          <button type="button" class="btn btn-outline-mrm btn-option" @click="onAnswer(option.id)" v-for="option in options" :key="option.name + option.id">{{option.name}}</button>
         </div>
       </div>
 
@@ -164,33 +166,52 @@ export default {
   color: #54216f;
 }
 
-.photo {
-  height: 300px;
+.polaroid-container {
   margin-bottom: 16px;
   text-align: center;
+}
+
+.polaroid {
+  background: #fff;
+  display: inline-block;
+  padding: 15px 15px 40px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  // transform: rotateZ(0) translateY(0);
 
   img {
-    height: 100%;
+    width: 250px;
+    height: 250px;
   }
+}
 
-  &.no-margin {
-    margin-bottom: 0;
-  }
-
-  &.full {
-    width: 100%;
-    height: auto;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
+.polaroid-enter-active, .polaroid-leave-active {
+  transition: opacity ease .3s, transform ease .3s;
+}
+.polaroid-leave-active {
+  transition-duration: .1s;
+}
+.polaroid-enter, .polaroid-leave-to {
+  opacity: 0;
+}
+.polaroid-enter {
+  transform: rotateZ(5deg) translateY(-50px);
+}
+.polaroid-enter-to {
+  transform: rotateZ(0) translateY(0);
+}
+.polaroid-leave-to {
+  transform: rotateZ(0) translateX(-50px);
 }
 
 .options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: .5em;
+}
+
+.btn-option {
+  white-space: normal;
 }
 </style>
