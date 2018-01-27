@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="col-sm-5">
-      <div class="pt-2">
+      <div class="pt-2 text-center text-sm-left">
         <p><strong>{{ user }}</strong>, your score is <strong class="score">{{ answerCount }}</strong></p>
         <p><button type="button" class="btn btn-mrm" @click="initializeGame"><font-awesome-icon :icon="['fal', 'repeat']" fixed-width /> Play Again</button></p>
 

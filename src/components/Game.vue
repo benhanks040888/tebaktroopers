@@ -15,7 +15,7 @@
           </transition>
         </div>
 
-        <div class="options">
+        <div class="options" ref="opts">
           <button type="button" class="btn btn-outline-mrm btn-option" @click="onAnswer(option.id)" v-for="option in options" :key="option.name + option.id">{{option.name}}</button>
         </div>
       </div>
@@ -109,6 +109,7 @@ export default {
           this.playSound('correct')
           this.setCurrentQuestion(this.questions[this.answerCount])
           this.setOptions()
+          // this.$refs.opts.focus()
         }
       } else {
         this.playSound('wrong')
@@ -133,6 +134,7 @@ export default {
   display: flex;
   padding-bottom: 15px;
   justify-content: space-between;
+  margin-bottom: 15px;
 
   @media (min-width: 576px) {
     position: absolute;
@@ -167,8 +169,13 @@ export default {
 }
 
 .polaroid-container {
-  margin-bottom: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
+
+  @media (min-width: 576px) {
+    margin-top: 0;
+  }
 }
 
 .polaroid {
@@ -213,5 +220,17 @@ export default {
 
 .btn-option {
   white-space: normal;
+}
+</style>
+
+<style lang="scss" scoped>
+@media (hover: none) {
+  .btn-outline-mrm {
+    &:hover {
+      color: #54216f;
+      background-color: transparent;
+      border-color: #54216f;
+    }
+  }
 }
 </style>
