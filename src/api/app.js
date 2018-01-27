@@ -75,11 +75,13 @@ export default {
       })
     }
 
+    let questionsByGender = questions.filter(e => e.gender === currentQuestion.gender)
+
     while (options.length < 4) {
-      let randomNumber = Math.floor(Math.random() * totalQuestions)
-      // if (!options.includes(randomNumber)) {
+      let randomNumber = Math.floor(Math.random() * questionsByGender.length)
+
       if (options.filter(e => e.id === randomNumber).length === 0) {
-        let q = questions[randomNumber]
+        let q = questionsByGender[randomNumber]
         options.push({
           id: q.id,
           name: q.name
