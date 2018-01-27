@@ -1,11 +1,11 @@
 <template>
   <div class="card card-rule">
     <div class="card-body">
-      <h2 class="card-title">The rule is simple:</h2>
+      <h2 class="card-title"><strong>The rule is simple:</strong></h2>
       <ol>
         <li>Tebak the <span class="text-success">correct</span> answer</li>
-        <li>Don't tebak the <span class="text-danger">wrong</span> answer</li>
-        <li>Get the <span class="text-primary">highest score</span></li>
+        <li>One <span class="text-danger">wrong</span> answer and it's game over!</li>
+        <li>Get the <span class="text-primary">highest score</span> without any mistake</li>
       </ol>
       <p>Can you tebak them all?</p>
     </div>
