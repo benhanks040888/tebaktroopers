@@ -111,6 +111,7 @@ export default {
     .leaderboard-item-score {
       font-size: 1.5em;
       width: auto;
+      padding-right: 8px;
     }
   }
 
