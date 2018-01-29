@@ -23,7 +23,7 @@
         </div>
         <div class="insult-container">
           <div class="insult-quote">
-            &ldquo;Kamu HRD ya? Hebat! <font-awesome-icon :icon="['fal', 'smile']" fixed-width />&rdquo;
+            &ldquo;Hebat! Kayaknya kamu berbakat jadi HRD! <font-awesome-icon :icon="['fal', 'smile']" fixed-width />&rdquo;
           </div>
         </div>
       </div>
