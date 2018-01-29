@@ -96,7 +96,9 @@
     "name": "Desca Ardhi Yudha",
     "gender": "m",
     "image": "37.jpg",
-    "dummies": []
+    "dummies": [
+      "Desca Pratama"
+    ]
   },
   {
     "name": "Dody Mardiansyah",
@@ -121,14 +123,18 @@
     "name": "Garth Parlimbangan",
     "gender": "m",
     "image": "13.jpg",
-    "dummies": []
+    "dummies": [
+      "Garth Parliambangan",
+      "Garth Perlimbangan"
+    ]
   },
   {
     "name": "Gery Irvandi",
     "gender": "m",
     "image": "14.jpg",
     "dummies": [
-      "Gery Halim"
+      "Gery Halim",
+      "Garry Irvandy"
     ]
   },
   {
@@ -138,7 +144,7 @@
     "dummies": [
       "Hendri Susanto",
       "Hendro Susanto",
-      "Susanto"
+      "Hendra Santoso"
     ]
   },
   {
@@ -154,19 +160,25 @@
     "name": "Indah Pratiwi Pribadi",
     "gender": "f",
     "image": "32.jpg",
-    "dummies": []
+    "dummies": [
+      "Indah Pertiwi"
+    ]
   },
   {
     "name": "Intan Parameswari Kusumoputri",
     "gender": "f",
     "image": "25.jpg",
-    "dummies": []
+    "dummies": [
+      "Intan Kusumaputri"
+    ]
   },
   {
     "name": "Jeffrey Pesuarissa",
     "gender": "m",
     "image": "51.jpg",
-    "dummies": []
+    "dummies": [
+      "Jeffrey Setiawan"
+    ]
   },
   {
     "name": "Mohamad Kemal Saleh",
@@ -174,7 +186,7 @@
     "image": "52.jpg",
     "dummies": [
       "Kemal Patel",
-      "Kemal Palevi"
+      "Kemal Soleh"
     ]
   },
   {
@@ -187,7 +199,9 @@
     "name": "Nadia Rarasati Putri",
     "gender": "f",
     "image": "23.jpg",
-    "dummies": []
+    "dummies": [
+      "Nadia Saraswati"
+    ]
   },
   {
     "name": "Nadiyah Wulandari",
@@ -199,7 +213,9 @@
     "name": "Pandu Attahiyyat",
     "gender": "m",
     "image": "21.jpg",
-    "dummies": []
+    "dummies": [
+      "Pandu Hidayat"
+    ]
   },
   {
     "name": "Priskila Setyaningrum",
@@ -213,25 +229,33 @@
     "name": "Refika Yasmine",
     "gender": "f",
     "image": "18.jpg",
-    "dummies": []
+    "dummies": [
+      "Refika Jasmin"
+    ]
   },
   {
     "name": "Renick Marlon Tjendarakusuma",
     "gender": "m",
     "image": "20.jpg",
-    "dummies": []
+    "dummies": [
+      "Renick Marlon Candrakusuma"
+    ]
   },
   {
     "name": "Riski Yulisetianie",
     "gender": "f",
     "image": "17.jpg",
-    "dummies": []
+    "dummies": [
+      "Riski Yulistiawati"
+    ]
   },
   {
     "name": "Saipul Anwar",
     "gender": "m",
     "image": "78.jpg",
-    "dummies": []
+    "dummies": [
+      "Saiful Anwar"
+    ]
   },
   {
     "name": "Satriyo Bagus",
@@ -247,7 +271,8 @@
     "gender": "m",
     "image": "15.jpg",
     "dummies": [
-      "Sandi Adrian"
+      "Sandi Adrian",
+      "Sandi Andrian"
     ]
   },
   {
@@ -272,7 +297,9 @@
     "name": "Okky Fachrudin",
     "gender": "m",
     "image": "46.jpg",
-    "dummies": []
+    "dummies": [
+      "Okky Lukman"
+    ]
   },
   {
     "name": "Aditya Putra Anugerah Gusti",
@@ -288,7 +315,9 @@
     "name": "Syamsiar Agustina",
     "gender": "f",
     "image": "94.jpg",
-    "dummies": []
+    "dummies": [
+      "Syamsiar Agustini"
+    ]
   },
   {
     "name": "Daniel Hagmeijer",
@@ -310,7 +339,9 @@
     "name": "Kanya Drestanti",
     "gender": "f",
     "image": "43.jpg",
-    "dummies": []
+    "dummies": [
+      "Kanya Drestianti"
+    ]
   },
   {
     "name": "M. Fajar Kuntoro",
@@ -384,8 +415,11 @@
   {
     "name": "Cicilia Fabiola Satrio",
     "gender": "f",
-    "image": "",
-    "dummies": []
+    "image": "107.jpg",
+    "dummies": [
+      "Fabiola Cecilia",
+      "Cecilia Fabiola"
+    ]
   },
   {
     "name": "Cintantya Sekarkinanthi",
@@ -519,7 +553,9 @@
     "name": "Khairani Tasrida",
     "gender": "f",
     "image": "88.jpg",
-    "dummies": []
+    "dummies": [
+      "Khairani Tarsida"
+    ]
   },
   {
     "name": "Mandha Wicaksono",
@@ -543,13 +579,17 @@
     "name": "Maynard Rahadian Dirgantara",
     "gender": "m",
     "image": "90.jpg",
-    "dummies": []
+    "dummies": [
+      "Mayneer Rahadian Dirgantara"
+    ]
   },
   {
     "name": "Mega Novita",
     "gender": "f",
     "image": "91.jpg",
-    "dummies": []
+    "dummies": [
+      "Mega Susanti"
+    ]
   },
   {
     "name": "Michael",
@@ -561,19 +601,25 @@
     "name": "Patrick Soe",
     "gender": "m",
     "image": "100.jpg",
-    "dummies": []
+    "dummies": [
+      "Patrick Soetrisno"
+    ]
   },
   {
     "name": "Rangga Puja Pratama",
     "gender": "m",
     "image": "92.jpg",
-    "dummies": []
+    "dummies": [
+      "Melkhior Ranga"
+    ]
   },
   {
     "name": "Rizka Dwi Putri Amanda",
     "gender": "f",
     "image": "54.jpg",
-    "dummies": []
+    "dummies": [
+      "Rizka Manda Putri"
+    ]
   },
   {
     "name": "Sandi Utomo",
@@ -755,7 +801,9 @@
     "name": "Abi Rafdi",
     "gender": "m",
     "image": "73.jpg",
-    "dummies": []
+    "dummies": [
+      "Abi Rafi"
+    ]
   },
   {
     "name": "Hasna Tsaniya Rananti",
@@ -790,8 +838,25 @@
     "name": "Putri Kerstiawati",
     "gender": "f",
     "image": "77.jpg",
+    "dummies": []
+  },
+  {
+    "name": "Marianne Admardatine",
+    "gender": "f",
+    "image": "108.jpg",
     "dummies": [
-      
+      "Marianne Amartine",
+      "Mary Anne Admardatine",
+      "Marianne Amartha"
+    ]
+  },
+  {
+    "name": "Brilianti Citra",
+    "gender": "f",
+    "image": "109.jpg",
+    "dummies": [
+      "Brilianti Cita",
+      "Brillianty Citra"
     ]
   }
 ]
